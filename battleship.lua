@@ -1027,6 +1027,8 @@ local function stagePlay(bs, stage, view, command)
         battleshipSetStage(bs, 2)
         return false
 
+    --[[ For debugging purposes
+    
     elseif (command == "enemy") then
 
         for shipNum = 1, #bs.humanShips do
@@ -1044,7 +1046,7 @@ local function stagePlay(bs, stage, view, command)
                 addShot(bs.humanShots, bs.enemyShips, ship.cells[cellNum].x, ship.cells[cellNum].y)
             end
         end
-       
+    --]]
     else
     
         local coordinateString = iif (string.sub(command, 1, 4) == "fire", string.sub(command, 6, 7), command)
